@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">&#9776; Menu</button>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="dashboard-title">
+      <h1 id="dashboard-title">Dashboard</h1>
+      <p>Welcome back! Here is a quick summary of your account.</p>
+
+      <div class="stats-flex">
+        <div class="stat-badge"><span>Courses enrolled</span> <strong>4</strong></div>
+        <div class="stat-badge"><span>Overall attendance</span> <strong>87%</strong></div>
+        <div class="stat-badge"><span>Unread notices</span> <strong>1</strong></div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h2>Your Courses</h2>
+          <p>4 courses enrolled. <a href="courses.html">View all courses</a></p>
+        </div>
+
+        <div class="card">
+          <h2>Attendance</h2>
+          <p>Overall attendance: 87%. <a href="attendance.html">View details</a></p>
+        </div>
+
+        <div class="card">
+          <h2>Latest Notice</h2>
+          <p>Mid-semester exam schedule released. <a href="notices.html">View all notices</a></p>
+        </div>
+
+        <div class="card">
+          <h2>Profile</h2>
+          <p>Keep your profile updated. <a href="profile.html">Go to profile</a></p>
+        </div>
+      </div>
+
+      <h2>Campus Map</h2>
+      <iframe
+        title="Campus location map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28767.949413350285!2d21.049267961683956!3d25.6715043339173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13f3ff1fe9cd4ac9%3A0xdb7c69ea8409556!2sTazirbu%2C%20Libya!5e0!3m2!1sen!2sin!4v1784103306228!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border:0; max-width:900px; display:block; margin:15px auto;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
+  </footer>
+
+    
+</body>
+</html>

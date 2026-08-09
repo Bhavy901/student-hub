@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudentHub - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <header>
+    <div class="logo">StudentHub</div>
+    <nav>
+      <ul>
+       <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Login</h1>
+    <p>Enter your details below to access your dashboard.</p>
+
+    <form action="dashboard.html" method="get">
+      <label for="userId">Student / Faculty ID</label>
+      <input type="text" id="userId" name="userId" placeholder="e.g. 25CS001" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="role">Login as</label>
+      <select id="role" name="role">
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudentHub | CHARUSAT</p>
+  </footer>
+<<<<<<< HEAD
+        
+  <script src="js/app.js"></script>   
+=======
+  
+>>>>>>> a251351 (Updated all file)
+</body>
+</html>
