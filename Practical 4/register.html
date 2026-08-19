@@ -7,12 +7,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
 
   <header>
-    <div class="logo">StudentHub</div>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
     <nav aria-label="Main navigation">
-      <ul>
+      <ul id="primary-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="register.html" aria-current="page">Register</a></li>
@@ -36,37 +46,56 @@
       <h1 id="register-title">Create an Account</h1>
       <p>Fill in your details to register on StudentHub.</p>
 
-      <form action="login.html" method="get">
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName" required>
+      <form action="login.html" method="get" class="form-grid">
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
 
-        <label for="studentId">Student ID</label>
-        <input type="text" id="studentId" name="studentId" placeholder="e.g. 25CS001" required>
+        <div class="field">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" name="studentId" placeholder="e.g. 25CS001" required>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
 
-        <label for="branch">Branch</label>
-        <select id="branch" name="branch">
-          <option value="CS">Computer Science</option>
-          <option value="IT">Information Technology</option>
-          <option value="EC">Electronics & Communication</option>
-          <option value="ME">Mechanical</option>
-        </select>
+        <div class="field">
+          <label for="branch">Branch</label>
+          <select id="branch" name="branch">
+            <option value="CS">Computer Science</option>
+            <option value="IT">Information Technology</option>
+            <option value="EC">Electronics &amp; Communication</option>
+            <option value="ME">Mechanical</option>
+          </select>
+        </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <div class="field form-full">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
 
-        <button type="submit">Register</button>
+        <button type="submit" class="form-full">Register</button>
       </form>
 
-      <p>Already have an account? <a href="login.html">Login here</a></p>
+      <p style="margin-top:12px;">Already have an account? <a href="login.html">Login here</a></p>
     </section>
   </main>
+
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog">
+      <button id="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>

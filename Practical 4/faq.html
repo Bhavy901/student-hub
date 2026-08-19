@@ -4,15 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudentHub - FAQ</title>
+  <meta name="description" content="Frequently asked questions about StudentHub college portal.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
 
   <header>
-    <div class="logo">StudentHub</div>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
     <nav aria-label="Main navigation">
-      <ul>
+      <ul id="primary-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="register.html">Register</a></li>
@@ -34,37 +46,94 @@
   <main id="main-content">
     <section aria-labelledby="faq-title">
       <h1 id="faq-title">Frequently Asked Questions</h1>
+      <p style="margin-bottom:16px; color:#555;">Click a question to expand the answer.</p>
 
-      <article class="card">
-        <h2>How do I register?</h2>
-        <p>Use the registration page and complete your student details.</p>
-      </article>
+      <!-- ① Collapsible FAQ accordion -->
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          How do I register?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Use the <a href="register.html">Registration page</a> and complete your student details including your enrollment number, branch, and semester. Once submitted, your account will be activated within 24 hours.</p>
+        </div>
+      </div>
 
-      <article class="card">
-        <h2>How do I view attendance?</h2>
-        <p>Open the attendance page from the dashboard section.</p>
-      </article>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          How do I view my attendance?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Open the <a href="attendance.html">Attendance page</a> from the dashboard section. You can view subject-wise attendance and download your attendance report as a PDF.</p>
+        </div>
+      </div>
 
-      <article class="card">
-        <h2>How do I reset my password?</h2>
-        <p>Use the login page and contact your branch admin to reset your credentials.</p>
-      </article>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          How do I reset my password?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Use the <a href="login.html">Login page</a> and click "Forgot Password". If you still face issues, contact your branch admin who can reset your credentials from the Admin panel.</p>
+        </div>
+      </div>
 
-      <article class="card">
-        <h2>Where can I see notices?</h2>
-        <p>All announcements are posted on the Notices page and linked from the Dashboard.</p>
-      </article>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Where can I see notices?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>All announcements are posted on the <a href="notices.html">Notices page</a> and are also linked from the Dashboard. Important notices also appear in the notification banner at the top of every page.</p>
+        </div>
+      </div>
 
-      <article class="card">
-        <h2>How do I contact support?</h2>
-        <p>Use the Contact page form or the Feedback page to send us a message.</p>
-      </article>
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          How do I contact support?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Use the <a href="contact.html">Contact page</a> form or the <a href="feedback.html">Feedback page</a> to send us a message. Our team typically responds within one working day.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Can I switch between dark and light mode?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes! Click the <strong>🌙 Dark Mode / ☀ Light Mode</strong> button in the top-right corner of the header. Your preference is saved automatically and will persist across all pages and sessions.</p>
+        </div>
+      </div>
+
+      <!-- Modal trigger example on FAQ page -->
+      <div style="margin-top:24px;">
+        <button class="btn-modal"
+                data-modal-target="faq-modal"
+                data-modal-title="Still have questions?"
+                data-modal-body="&lt;p&gt;Our support team is available Monday–Friday, 9 AM – 5 PM.&lt;/p&gt;&lt;p style='margin-top:10px'&gt;📧 support@studenthub.charusat.ac.in&lt;br&gt;📞 +91 98765 43210&lt;/p&gt;">
+          📬 Contact Support
+        </button>
+      </div>
     </section>
   </main>
+
+  <!-- Modal Popup -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog">
+      <button id="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>

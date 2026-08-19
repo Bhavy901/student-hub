@@ -7,73 +7,47 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
   <header>
-    <div class="logo">StudentHub</div>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
     <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="courses.html" aria-current="page">Courses</a></li>
-        <li><a href="attendance.html">Attendance</a></li>
-        <li><a href="notices.html">Notices</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="admin.html">Admin</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li><li><a href="courses.html" aria-current="page">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li><li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li><li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li><li><a href="feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
-
   <main id="main-content">
     <section aria-labelledby="courses-title">
       <h1 id="courses-title">Courses</h1>
       <p>Below is the list of courses offered this semester.</p>
-
       <table>
-        <tr>
-          <th scope="col">Course Code</th>
-          <th scope="col">Course Name</th>
-          <th scope="col">Credits</th>
-          <th scope="col">Faculty</th>
-        </tr>
-        <tr>
-          <td>CSUC101</td>
-          <td>Digital Electronics</td>
-          <td>4</td>
-          <td>Dr. Dhara Solanki</td>
-        </tr>
-        <tr>
-          <td>CEUC102</td>
-          <td>Programming with C++</td>
-          <td>4</td>
-          <td>Dr. Abhishek Patel</td>
-        </tr>
-        <tr>
-          <td>MAUC101</td>
-          <td>Engineering Mathematics</td>
-          <td>3</td>
-          <td>Dr. Pagnesh Makwana</td>
-        </tr>
-        <tr>
-          <td>MEUC101</td>
-          <td>Engineering Drawing</td>
-          <td>2</td>
-          <td>Dr. Sagar Chokshi</td>
-        </tr>
+        <tr><th scope="col">Course Code</th><th scope="col">Course Name</th><th scope="col">Credits</th><th scope="col">Faculty</th></tr>
+        <tr><td>CSUC101</td><td>Digital Electronics</td><td>4</td><td>Dr. Dhara Solanki</td></tr>
+        <tr><td>CEUC102</td><td>Programming with C++</td><td>4</td><td>Dr. Abhishek Patel</td></tr>
+        <tr><td>MAUC101</td><td>Engineering Mathematics</td><td>3</td><td>Dr. Pagnesh Makwana</td></tr>
+        <tr><td>MEUC101</td><td>Engineering Drawing</td><td>2</td><td>Dr. Sagar Chokshi</td></tr>
       </table>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
-  </footer>
-
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog"><button id="modal-close" aria-label="Close dialog">✕</button><h2 id="modal-title"></h2><div id="modal-body"></div></div>
+  </div>
+  <footer><p>&copy; <span data-year></span> StudentHub | CHARUSAT</p></footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

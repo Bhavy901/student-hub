@@ -7,12 +7,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
 
   <header>
-    <div class="logo">StudentHub</div>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
     <nav aria-label="Main navigation">
-      <ul>
+      <ul id="primary-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="register.html">Register</a></li>
@@ -53,12 +63,22 @@
         <button type="submit">Login</button>
       </form>
 
-      <p>Don't have an account? <a href="register.html">Register here</a></p>
+      <p style="margin-top:12px;">Don't have an account? <a href="register.html">Register here</a></p>
     </section>
   </main>
+
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog">
+      <button id="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

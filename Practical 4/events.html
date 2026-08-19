@@ -7,65 +7,98 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎉 Tech Fest registrations close on Aug 18! <a href="events.html">Register now →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
   <header>
-    <div class="logo">StudentHub</div>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
     <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="attendance.html">Attendance</a></li>
-        <li><a href="notices.html">Notices</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="events.html" aria-current="page">Events</a></li>
-        <li><a href="admin.html">Admin</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li><li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li><li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html" aria-current="page">Events</a></li><li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li><li><a href="feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
-
   <main id="main-content">
     <section aria-labelledby="events-title">
       <h1 id="events-title">Campus Events</h1>
       <p>Stay updated with student activities, workshops, and college events.</p>
 
       <h2>Upcoming Events</h2>
+      <div class="events-grid">
+        <article class="event-item">
+          <p class="event-date">Aug 10</p>
+          <div>
+            <h3>Orientation Program</h3>
+            <p>Welcome session for new students.</p>
+            <button class="btn-modal" style="margin-top:8px;font-size:13px;padding:6px 12px;"
+                    data-modal-title="Orientation Program"
+                    data-modal-body="&lt;p&gt;Date: August 10, 2026 | Venue: Main Auditorium&lt;/p&gt;&lt;p style='margin-top:8px'&gt;All first-year students must attend. Bring your ID card and admission letter.&lt;/p&gt;">
+              View Details
+            </button>
+          </div>
+        </article>
 
-      <article class="card event-item">
-        <p class="event-date">Aug 10</p>
-        <h3>Orientation Program</h3>
-        <p>Welcome session for new students.</p>
-      </article>
+        <article class="event-item">
+          <p class="event-date">Aug 20</p>
+          <div>
+            <h3>Tech Fest</h3>
+            <p>Workshops, hackathons, and project showcases.</p>
+            <button class="btn-modal" style="margin-top:8px;font-size:13px;padding:6px 12px;"
+                    data-modal-title="Tech Fest 2026"
+                    data-modal-body="&lt;p&gt;Date: August 20–21, 2026 | Venue: CS Lab Block&lt;/p&gt;&lt;ul style='margin:8px 0 0 18px'&gt;&lt;li&gt;Web Dev Hackathon&lt;/li&gt;&lt;li&gt;AI/ML Workshop&lt;/li&gt;&lt;li&gt;Project Expo&lt;/li&gt;&lt;/ul&gt;">
+              View Details
+            </button>
+          </div>
+        </article>
 
-      <article class="card event-item">
-        <p class="event-date">Aug 20</p>
-        <h3>Tech Fest</h3>
-        <p>Workshops, hackathons, and project showcases.</p>
-      </article>
+        <article class="event-item">
+          <p class="event-date">Sep 5</p>
+          <div>
+            <h3>Sports Day</h3>
+            <p>Inter-branch sports competitions.</p>
+          </div>
+        </article>
 
-      <article class="card event-item">
-        <p class="event-date">Sep 5</p>
-        <h3>Sports Day</h3>
-        <p>Inter-branch sports competitions.</p>
-      </article>
+        <article class="event-item">
+          <p class="event-date">Sep 18</p>
+          <div>
+            <h3>Cultural Night</h3>
+            <p>Music, dance, and drama performances by students.</p>
+          </div>
+        </article>
 
-      <article class="card">
+        <article class="event-item">
+          <p class="event-date">Oct 2</p>
+          <div>
+            <h3>Placement Drive</h3>
+            <p>Campus recruitment session with visiting companies.</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="card join-card">
         <h2>How to Join</h2>
         <p>Register online and check the event calendar for details.</p>
       </article>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
-  </footer>
-
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog"><button id="modal-close" aria-label="Close dialog">✕</button><h2 id="modal-title"></h2><div id="modal-body"></div></div>
+  </div>
+  <footer><p>&copy; <span data-year></span> StudentHub | CHARUSAT</p></footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
