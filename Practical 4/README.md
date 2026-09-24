@@ -1,5 +1,10 @@
 # StudentHub – Responsive UI Design using CSS Grid, Flexbox, and Bootstrap/Tailwind
 
+**Student:** Bhavy Gol  
+**Roll No:** 25CS016  
+
+---
+
 ## Overview
 
 This project contains the HTML5 version of the StudentHub website. Existing HTML pages were updated to use HTML5 semantic elements, improving structure, readability, accessibility, and maintainability.
