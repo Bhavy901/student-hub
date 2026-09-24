@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🔒 Admin area – only authorized personnel. <a href="login.html">Login →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
+  <header>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li><li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li><li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li><li><a href="admin.html" aria-current="page">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li><li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section aria-labelledby="admin-title">
+      <h1 id="admin-title">Admin Panel</h1>
+      <p>Administrative tools for managing users, notices, and academic records.</p>
+
+      <article class="card">
+        <h2>Admin Actions</h2>
+        <ul>
+          <li>Add or remove users</li>
+          <li>Publish notices</li>
+          <li>Monitor system updates</li>
+        </ul>
+      </article>
+
+      <article class="card" style="margin-top:14px;">
+        <h2>User Management</h2>
+
+        <!-- Dynamic student directory loaded from data/students.json via Fetch API -->
+        <div class="json-controls">
+          <input type="search" id="students-search" placeholder="Search by name or student ID..." aria-label="Search students">
+          <select id="students-branch" aria-label="Filter by branch">
+            <option value="">All Branches</option>
+          </select>
+          <select id="students-sort" aria-label="Sort students">
+            <option value="name-asc">Name (A-Z)</option>
+            <option value="name-desc">Name (Z-A)</option>
+            <option value="id-asc">Student ID</option>
+          </select>
+        </div>
+        <p id="students-result-count" class="result-count"></p>
+        <div id="students-state"></div>
+
+        <table>
+          <tr>
+            <th scope="col">Student ID</th><th scope="col">Name</th>
+            <th scope="col">Branch</th><th scope="col">Status</th><th scope="col">Email</th>
+          </tr>
+          <tbody id="students-json-body"></tbody>
+        </table>
+        <div id="students-pagination" class="pagination"></div>
+      </article>
+
+      <article class="card" style="margin-top:14px;">
+        <h2>Post a Notice</h2>
+        <form action="notices.html" method="get">
+          <label for="noticeTitle">Notice Title</label>
+          <input type="text" id="noticeTitle" name="noticeTitle" required>
+          <label for="noticeBody">Notice Details</label>
+          <textarea id="noticeBody" name="noticeBody" rows="4" required></textarea>
+          <button type="submit">Publish Notice</button>
+        </form>
+      </article>
+    </section>
+  </main>
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog"><button id="modal-close" aria-label="Close dialog">✕</button><h2 id="modal-title"></h2><div id="modal-body"></div></div>
+  </div>
+  <footer><p>&copy; <span data-year></span> StudentHub | CHARUSAT</p></footer>
+  <script src="js/main.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/students-app.js"></script>
+</body>
+</html>

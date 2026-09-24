@@ -1,0 +1,19 @@
+[
+  { "id": 1,  "studentId": "25CS001",    "name": "Ansh Patel",         "branch": "Computer Science Engineering", "semester": 2, "status": "Active",   "email": "ansh.25cs001@charusat.edu.in" },
+  { "id": 2,  "studentId": "25AIML068",  "name": "Margish Sojitra",    "branch": "AI & ML",                      "semester": 2, "status": "Active",   "email": "margish.25aiml068@charusat.edu.in" },
+  { "id": 3,  "studentId": "25CE025",    "name": "Hemanshu Dholariya", "branch": "Computer Engineering",         "semester": 2, "status": "Active",   "email": "hemanshu.25ce025@charusat.edu.in" },
+  { "id": 4,  "studentId": "25IT014",    "name": "Priya Shah",         "branch": "Information Technology",       "semester": 2, "status": "Active",   "email": "priya.25it014@charusat.edu.in" },
+  { "id": 5,  "studentId": "25EC032",    "name": "Karan Mehta",        "branch": "Electronics & Communication",  "semester": 2, "status": "Active",   "email": "karan.25ec032@charusat.edu.in" },
+  { "id": 6,  "studentId": "25ME019",    "name": "Riya Joshi",         "branch": "Mechanical",                   "semester": 2, "status": "Inactive", "email": "riya.25me019@charusat.edu.in" },
+  { "id": 7,  "studentId": "25CS045",    "name": "Devansh Trivedi",    "branch": "Computer Science Engineering", "semester": 2, "status": "Active",   "email": "devansh.25cs045@charusat.edu.in" },
+  { "id": 8,  "studentId": "25CS078",    "name": "Sanya Desai",        "branch": "Computer Science Engineering", "semester": 2, "status": "Active",   "email": "sanya.25cs078@charusat.edu.in" },
+  { "id": 9,  "studentId": "25IT002",    "name": "Yash Rana",          "branch": "Information Technology",       "semester": 2, "status": "Suspended","email": "yash.25it002@charusat.edu.in" },
+  { "id": 10, "studentId": "25AIML011",  "name": "Neha Chauhan",       "branch": "AI & ML",                      "semester": 2, "status": "Active",   "email": "neha.25aiml011@charusat.edu.in" },
+  { "id": 11, "studentId": "25CE008",    "name": "Om Prajapati",       "branch": "Computer Engineering",         "semester": 2, "status": "Active",   "email": "om.25ce008@charusat.edu.in" },
+  { "id": 12, "studentId": "25EC050",    "name": "Diya Vyas",          "branch": "Electronics & Communication",  "semester": 2, "status": "Active",   "email": "diya.25ec050@charusat.edu.in" },
+  { "id": 13, "studentId": "25ME022",    "name": "Aryan Solanki",      "branch": "Mechanical",                   "semester": 2, "status": "Active",   "email": "aryan.25me022@charusat.edu.in" },
+  { "id": 14, "studentId": "25CS091",    "name": "Ishita Bhatt",       "branch": "Computer Science Engineering", "semester": 2, "status": "Inactive", "email": "ishita.25cs091@charusat.edu.in" },
+  { "id": 15, "studentId": "25IT037",    "name": "Kabir Thakkar",      "branch": "Information Technology",       "semester": 2, "status": "Active",   "email": "kabir.25it037@charusat.edu.in" },
+  { "id": 16, "studentId": "25AIML005",  "name": "Meera Pandya",       "branch": "AI & ML",                      "semester": 2, "status": "Active",   "email": "meera.25aiml005@charusat.edu.in" },
+  { "id": 17, "studentId": "25CE041",    "name": "Rohan Gohil",        "branch": "Computer Engineering",         "semester": 2, "status": "Active",   "email": "rohan.25ce041@charusat.edu.in" }
+]

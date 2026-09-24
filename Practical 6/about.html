@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - About</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
+
+  <header>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="about-title">
+      <h1 id="about-title">About StudentHub</h1>
+      <p>
+        StudentHub is a student-built web portal created as a semester-long
+        project. Its goal is to give students and faculty a single place to
+        manage everyday academic tasks such as viewing courses, checking
+        attendance, and reading notices.
+      </p>
+
+      <div class="about-grid">
+        <div>
+          <h2>User Roles</h2>
+          <div class="role-grid">
+            <div class="role-card">
+              <h3>Student</h3>
+              <p>Register, login, view courses, check attendance, view notices, edit profile</p>
+            </div>
+            <div class="role-card">
+              <h3>Faculty</h3>
+              <p>Login, post notices, mark attendance, view student list</p>
+            </div>
+            <div class="role-card">
+              <h3>Admin</h3>
+              <p>Manage users, manage courses, manage overall data</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="about-goal">
+          <h2>Project Goal</h2>
+          <p>
+            This project focuses on planning a clean, maintainable front-end
+            structure before backend development begins.
+          </p>
+          <button class="btn-modal" style="margin-top:12px;"
+                  data-modal-title="Our Mission"
+                  data-modal-body="&lt;p&gt;StudentHub aims to simplify academic life by providing a unified platform for students, faculty, and administrators.&lt;/p&gt;&lt;p style='margin-top:10px'&gt;Built with pure HTML, CSS, and JavaScript — no frameworks, just clean code.&lt;/p&gt;">
+            Read our Mission →
+          </button>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog">
+      <button id="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

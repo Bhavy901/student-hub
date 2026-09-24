@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - FAQ</title>
+  <meta name="description" content="Frequently asked questions about StudentHub college portal.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Notification Banner -->
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
+
+  <header>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="faq-title">
+      <h1 id="faq-title">Frequently Asked Questions</h1>
+      <p style="margin-bottom:16px; color:#555;">Click a question to expand the answer.</p>
+
+      <!-- Dynamic FAQ list loaded from data/faqs.json via Fetch API -->
+      <div class="json-controls">
+        <input type="search" id="faq-search" placeholder="Search questions or answers..." aria-label="Search FAQs">
+        <select id="faq-category" aria-label="Filter by topic">
+          <option value="">All Topics</option>
+        </select>
+      </div>
+      <p id="faq-result-count" class="result-count"></p>
+
+      <div id="faq-json-list"></div>
+      <div id="faq-pagination" class="pagination"></div>
+
+      <!-- Modal trigger example on FAQ page -->
+      <div style="margin-top:24px;">
+        <button class="btn-modal"
+                data-modal-target="faq-modal"
+                data-modal-title="Still have questions?"
+                data-modal-body="&lt;p&gt;Our support team is available Monday–Friday, 9 AM – 5 PM.&lt;/p&gt;&lt;p style='margin-top:10px'&gt;📧 support@studenthub.charusat.ac.in&lt;br&gt;📞 +91 98765 43210&lt;/p&gt;">
+          📬 Contact Support
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Popup -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog">
+      <button id="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/faq-app.js"></script>
+</body>
+</html>

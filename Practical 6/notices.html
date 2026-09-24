@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Notices</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>📋 Mid-semester exam schedule has been released! <a href="notices.html">View notices →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
+  <header>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li><li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li><li><a href="notices.html" aria-current="page">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li><li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li><li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section aria-labelledby="notices-title">
+      <h1 id="notices-title">Notices</h1>
+
+      <article class="card">
+        <h2>Mid-Semester Exam Schedule</h2>
+        <p>Posted on: 10 July 2026</p>
+        <p>The mid-semester exams will begin from 28 July 2026. Check the exam timetable on the notice board.</p>
+        <button class="btn-modal" style="margin-top:10px;font-size:13px;padding:7px 14px;"
+                data-modal-title="Mid-Semester Exam Schedule"
+                data-modal-body="&lt;p&gt;&lt;strong&gt;Exam dates:&lt;/strong&gt;&lt;/p&gt;&lt;ul style='margin:8px 0 0 18px'&gt;&lt;li&gt;Digital Electronics – 28 July&lt;/li&gt;&lt;li&gt;C++ Programming – 30 July&lt;/li&gt;&lt;li&gt;Engg. Mathematics – 1 Aug&lt;/li&gt;&lt;li&gt;Engg. Drawing – 3 Aug&lt;/li&gt;&lt;/ul&gt;">
+          View Details
+        </button>
+      </article>
+
+      <article class="card" style="margin-top:14px;">
+        <h2>Workshop on Web Development</h2>
+        <p>Posted on: 05 July 2026</p>
+        <p>A two-day workshop on HTML, CSS and JavaScript will be conducted in the Computer Lab.</p>
+      </article>
+
+      <article class="card" style="margin-top:14px;">
+        <h2>Library Timing Update</h2>
+        <p>Posted on: 01 July 2026</p>
+        <p>The central library will remain open until 8 PM on weekdays.</p>
+      </article>
+    </section>
+  </main>
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog"><button id="modal-close" aria-label="Close dialog">✕</button><h2 id="modal-title"></h2><div id="modal-body"></div></div>
+  </div>
+  <footer><p>&copy; <span data-year></span> StudentHub | CHARUSAT</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

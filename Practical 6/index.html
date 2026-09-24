@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Home</title>
+  <meta name="description" content="StudentHub – a college portal to manage courses, attendance, notices, and profiles.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ① Notification Banner -->
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
+
+  <header>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <!-- ⑤ Hamburger menu -->
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <!-- ⑥ Dark/Light theme switcher -->
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="home-title">
+      <div class="hero">
+        <h1 id="home-title">Welcome to StudentHub</h1>
+        <p>
+          StudentHub is a college portal that helps students and faculty manage
+          courses, attendance, notices, and profiles in one place.
+        </p>
+        <div class="hero-actions">
+          <a href="register.html">Create an account →</a>
+          <a href="login.html">Login →</a>
+          <!-- ② Modal trigger -->
+          <button class="btn-modal"
+                  data-modal-target="info-modal"
+                  data-modal-title="About StudentHub"
+                  data-modal-body="&lt;p&gt;StudentHub is built for &lt;strong&gt;CHARUSAT University&lt;/strong&gt; students and faculty.&lt;/p&gt;&lt;ul style='margin:10px 0 0 18px'&gt;&lt;li&gt;View &amp; register for courses&lt;/li&gt;&lt;li&gt;Track attendance in real time&lt;/li&gt;&lt;li&gt;Read important notices&lt;/li&gt;&lt;li&gt;Manage your profile&lt;/li&gt;&lt;/ul&gt;">
+            ℹ Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- ③ Content / Image Slider -->
+      <h2>Featured Highlights</h2>
+      <div id="slider-wrapper">
+        <div id="content-slider" aria-label="Feature highlights carousel" role="region">
+          <div class="slide">
+            <div class="slide-card">
+              <span class="slide-icon">📚</span>
+              <div>
+                <h3>Course Management</h3>
+                <p>Browse and enroll in all your semester courses from one dashboard. Track credits and schedules with ease.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-card">
+              <span class="slide-icon">✅</span>
+              <div>
+                <h3>Attendance Tracker</h3>
+                <p>View your subject-wise attendance percentage instantly. Get alerts when attendance drops below 75%.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-card">
+              <span class="slide-icon">📢</span>
+              <div>
+                <h3>Notice Board</h3>
+                <p>Stay updated with exam schedules, holiday lists, and university circulars published by the admin.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-card">
+              <span class="slide-icon">🎉</span>
+              <div>
+                <h3>Campus Events</h3>
+                <p>Find hackathons, cultural fests, and seminars happening across the campus and register online.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="slider-prev" aria-label="Previous slide">&#8592;</button>
+          <div id="slider-dots" role="tablist" aria-label="Slide indicators"></div>
+          <button class="slider-btn" id="slider-next" aria-label="Next slide">&#8594;</button>
+        </div>
+      </div>
+
+      <h2>What can you do here?</h2>
+      <div class="card-grid">
+        <div class="card"><p>📚 View and register for courses</p></div>
+        <div class="card"><p>✅ Track your attendance</p></div>
+        <div class="card"><p>📢 Read important notices</p></div>
+        <div class="card"><p>👤 Manage your profile</p></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ② Modal Popup -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog">
+      <button id="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span data-year></span> StudentHub | CHARUSAT</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

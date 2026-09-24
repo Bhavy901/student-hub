@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="notification-banner" role="alert" aria-live="polite">
+    <span>🎓 New semester registrations are now open! <a href="register.html">Register here →</a></span>
+    <button id="banner-close" aria-label="Dismiss notification">✕</button>
+  </div>
+  <header>
+    <div class="header-bar">
+      <div class="logo">StudentHub</div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">☰ Menu</button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li><li><a href="courses.html">Courses</a></li>
+        <li><a href="attendance.html">Attendance</a></li><li><a href="notices.html">Notices</a></li>
+        <li><a href="profile.html" aria-current="page">Profile</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="events.html">Events</a></li><li><a href="admin.html">Admin</a></li>
+        <li><a href="faq.html">FAQ</a></li><li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section aria-labelledby="profile-title">
+      <h1 id="profile-title">My Profile</h1>
+      <article class="card">
+        <p><strong>Name:</strong> Ansh Patel</p>
+        <p><strong>Student ID:</strong> 25CS001</p>
+        <p><strong>Branch:</strong> Computer Science</p>
+        <p><strong>Semester:</strong> 2</p>
+        <p><strong>Email:</strong> ansh.25cs001@charusat.edu.in</p>
+      </article>
+      <h2>Update Profile</h2>
+      <form action="profile.html" method="get">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter address"></textarea>
+        <button type="submit">Save Changes</button>
+      </form>
+    </section>
+  </main>
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="modal-dialog"><button id="modal-close" aria-label="Close dialog">✕</button><h2 id="modal-title"></h2><div id="modal-body"></div></div>
+  </div>
+  <footer><p>&copy; <span data-year></span> StudentHub | CHARUSAT</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

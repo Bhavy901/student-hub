@@ -1,0 +1,19 @@
+[
+  { "id": 1,  "category": "Account",    "question": "How do I register?",                          "answer": "Use the Registration page and complete your student details including enrollment number, branch, and semester. Your account activates within 24 hours." },
+  { "id": 2,  "category": "Academics",  "question": "How do I view my attendance?",                  "answer": "Open the Attendance page from the dashboard. You can view subject-wise attendance and download a PDF report." },
+  { "id": 3,  "category": "Account",    "question": "How do I reset my password?",                   "answer": "Use the Login page and click Forgot Password. If issues persist, contact your branch admin to reset credentials." },
+  { "id": 4,  "category": "Academics",  "question": "Where can I see notices?",                      "answer": "All announcements are posted on the Notices page and linked from the Dashboard, plus shown in the top banner." },
+  { "id": 5,  "category": "Support",    "question": "How do I contact support?",                     "answer": "Use the Contact page form or the Feedback page. Our team typically responds within one working day." },
+  { "id": 6,  "category": "General",    "question": "Can I switch between dark and light mode?",     "answer": "Yes, click the Dark Mode / Light Mode button in the header. Your preference is saved automatically." },
+  { "id": 7,  "category": "Academics",  "question": "How do I check my exam timetable?",             "answer": "Exam schedules are posted on the Notices page as soon as they are released by the exam cell." },
+  { "id": 8,  "category": "Account",    "question": "Can I change my registered email address?",     "answer": "Go to Profile > Update Profile. Email changes may require verification from the admin office." },
+  { "id": 9,  "category": "Events",     "question": "How do I register for campus events?",          "answer": "Visit the Events page, browse upcoming events, and click Register on the event you want to attend." },
+  { "id": 10, "category": "Events",     "question": "Will I get a certificate for attending workshops?", "answer": "Most technical workshops issue e-certificates within a week of completion, sent to your registered email." },
+  { "id": 11, "category": "Academics",  "question": "How is my attendance percentage calculated?",   "answer": "It is calculated as classes attended divided by classes held, per subject, updated after every lecture." },
+  { "id": 12, "category": "Support",    "question": "Who do I contact for technical issues with the portal?", "answer": "Email support@studenthub.charusat.ac.in or use the Feedback page describing the issue in detail." },
+  { "id": 13, "category": "General",    "question": "Is StudentHub accessible on mobile devices?",   "answer": "Yes, the portal is fully responsive and works on mobile phones, tablets, and desktops." },
+  { "id": 14, "category": "Account",    "question": "What should I do if my account gets suspended?", "answer": "Contact the admin office with your student ID. Suspensions are usually due to pending fee dues or discipline holds." },
+  { "id": 15, "category": "Events",     "question": "Can faculty post their own events?",            "answer": "Faculty can request an event listing through the Admin panel, subject to approval by the events committee." },
+  { "id": 16, "category": "Academics",  "question": "What happens if my attendance falls below 75%?", "answer": "You may be marked as detained for that subject's exam unless a condonation request is approved." },
+  { "id": 17, "category": "General",    "question": "How do I provide feedback about the portal?",   "answer": "Use the Feedback page to rate your experience and leave suggestions for the development team." }
+]
