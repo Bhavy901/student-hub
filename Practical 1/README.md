@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # 📘 Practical 1 
 
-**Student:** Ansh Adodariya 
-**Roll No:** 25CS001
+**Student:** Bhavy Gol 
+**Roll No:** 25CS016
  
 
 ---

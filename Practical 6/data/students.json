@@ -1,5 +1,5 @@
 [
-  { "id": 1,  "studentId": "25CS001",    "name": "Ansh Patel",         "branch": "Computer Science Engineering", "semester": 2, "status": "Active",   "email": "ansh.25cs001@charusat.edu.in" },
+  { "id": 1,  "studentId": "25CS016",    "name": "Bhavy Gol",         "branch": "Computer Science Engineering", "semester": 2, "status": "Active",   "email": "bhavy.25cs016@charusat.edu.in" },
   { "id": 2,  "studentId": "25AIML068",  "name": "Margish Sojitra",    "branch": "AI & ML",                      "semester": 2, "status": "Active",   "email": "margish.25aiml068@charusat.edu.in" },
   { "id": 3,  "studentId": "25CE025",    "name": "Hemanshu Dholariya", "branch": "Computer Engineering",         "semester": 2, "status": "Active",   "email": "hemanshu.25ce025@charusat.edu.in" },
   { "id": 4,  "studentId": "25IT014",    "name": "Priya Shah",         "branch": "Information Technology",       "semester": 2, "status": "Active",   "email": "priya.25it014@charusat.edu.in" },
