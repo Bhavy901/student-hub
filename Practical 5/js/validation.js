@@ -3,6 +3,40 @@
 
   var form = document.getElementById('registration-form');
   var successPanel = document.getElementById('success-panel');
+  // validation.js: add after var successPanel = ...
+
+var password = document.getElementById('password');
+var strengthBar = document.querySelector('.password-strength');
+var strengthText = document.getElementById('strength-text');
+
+password.addEventListener('input', function () {
+  var p = password.value;
+  var score = 0;
+
+  if (p.length >= 8) score++;
+  if (/[A-Z]/.test(p)) score++;
+  if (/[a-z]/.test(p)) score++;
+  if (/[0-9]/.test(p)) score++;
+  if (/[^A-Za-z0-9]/.test(p)) score++;
+
+  strengthBar.className = 'password-strength';
+
+  if (p === '') {
+    strengthText.textContent = '';
+  } else if (score <= 2) {
+    strengthBar.classList.add('weak');
+    strengthText.textContent = 'Weak';
+  } else if (score === 3) {
+    strengthBar.classList.add('medium');
+    strengthText.textContent = 'Medium';
+  } else if (score === 4) {
+    strengthBar.classList.add('good');
+    strengthText.textContent = 'Good';
+  } else {
+    strengthBar.classList.add('strong');
+    strengthText.textContent = 'Strong';
+  }
+});
   var patterns = {
     name: /^[A-Za-z][A-Za-z ]{1,49}$/,
     email: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,

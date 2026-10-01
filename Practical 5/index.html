@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/validation.js" defer></script>
 </head>
+
 <body>
   <main class="page-shell">
     <section class="intro-panel" aria-labelledby="page-title">
-      
+
       <h1 id="page-title">Student Registration</h1>
       <p class="intro-copy">Create your learner profile by entering accurate academic and contact details.</p>
-      
+
     </section>
 
     <section class="form-panel" aria-labelledby="form-title">
@@ -29,7 +31,8 @@
         <div class="form-grid">
           <div class="field field-wide">
             <label for="full-name">Full name <span>*</span></label>
-            <input type="text" id="full-name" name="fullName" placeholder="e.g. Aarya Patel" autocomplete="name" required>
+            <input type="text" id="full-name" name="fullName" placeholder="e.g. Aarya Patel" autocomplete="name"
+              required>
             <small class="hint">Use 2-50 letters and spaces.</small>
             <p class="error-message" id="full-name-error" aria-live="polite"></p>
           </div>
@@ -42,20 +45,31 @@
 
           <div class="field">
             <label for="mobile">Mobile number <span>*</span></label>
-            <input type="tel" id="mobile" name="mobile" placeholder="9876543210" inputmode="numeric" maxlength="10" autocomplete="tel" required>
+            <input type="tel" id="mobile" name="mobile" placeholder="9876543210" inputmode="numeric" maxlength="10"
+              autocomplete="tel" required>
             <p class="error-message" id="mobile-error" aria-live="polite"></p>
           </div>
 
           <div class="field">
             <label for="password">Password <span>*</span></label>
-            <input type="password" id="password" name="password" placeholder="Create a strong password" autocomplete="new-password" required>
+            <input type="password" id="password" name="password" placeholder="Create a strong password"
+              autocomplete="new-password" required>
+           
+
             <small class="hint">8+ characters, with uppercase, lowercase, number and symbol.</small>
+
+            <div class="password-strength">
+            <span></span><span></span><span></span><span></span>
+            </div>
+            <strong id="strength-text"></strong>
+
             <p class="error-message" id="password-error" aria-live="polite"></p>
-          </div>
+            </div>
 
           <div class="field">
             <label for="confirm-password">Confirm password <span>*</span></label>
-            <input type="password" id="confirm-password" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password" required>
+            <input type="password" id="confirm-password" name="confirmPassword" placeholder="Re-enter your password"
+              autocomplete="new-password" required>
             <p class="error-message" id="confirm-password-error" aria-live="polite"></p>
           </div>
 
@@ -96,7 +110,8 @@
 
         <label class="terms-label">
           <input type="checkbox" id="terms" name="terms">
-          <span>I confirm that the information provided is correct and I accept the terms of registration. <strong>*</strong></span>
+          <span>I confirm that the information provided is correct and I accept the terms of registration.
+            <strong>*</strong></span>
         </label>
         <p class="error-message" id="terms-error" aria-live="polite"></p>
 
@@ -118,4 +133,5 @@
     </section>
   </main>
 </body>
+
 </html>

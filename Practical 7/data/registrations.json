@@ -1,0 +1,14 @@
+[
+  {
+    "id": "REG-1001",
+    "fullname": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+91 9876543210",
+    "department": "Computer Engineering",
+    "semester": "Semester 5",
+    "subject": "Inquiry regarding Workshop Registration",
+    "message": "Hello, I would like to register for the upcoming Web Development Workshop.",
+    "timestamp": "2026-09-24 10:15:30",
+    "csrf_valid": true
+  }
+]

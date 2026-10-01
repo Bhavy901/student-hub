@@ -1,53 +1,134 @@
-# StudentHub – Dynamic Data Fetching & Interactive UI Components
+# Practical 6: Fetch API, JSON, Search & Filter
 
-**Student:** Bhavy Gol  
-**Roll No:** 25CS016  
+## Objective
+Fetch external JSON data using the **Fetch API** and dynamically display it with search, filtering, sorting, and pagination.
 
----
+## Technologies
+- HTML5
+- CSS3
+- JavaScript ES6+
+- JSON
+- Fetch API
 
-## 🎯 Objective
-Build a dynamic, data-driven web application by fetching JSON data asynchronously and rendering dynamic UI components across StudentHub pages. This includes live filtering, search functionality, modal popups, tab switching, and localized state persistence.
+## Project Structure
 
----
-
-## 📋 Features Implemented
-- **Dynamic JSON Data Fetching:** Asynchronously loads student, event, and FAQ data from JSON datasets (`students.json`, `events.json`, `faqs.json`).
-- **Student Directory & Filtering:** Interactive admin panel with live search, department/status filter, pagination, and modal dialogs for adding/editing students.
-- **Interactive Events Hub:** Dynamic event card rendering, tab filtering (Upcoming, Workshops, Cultural), and modal RSVP registration.
-- **FAQ Accordion & Search:** Interactive expandable FAQ categories with instant search filtering.
-- **Responsive Layout & Design:** Fully responsive grid and flexbox layout designed for desktop, tablet, and mobile views.
-
----
-
-## 📁 Project Structure
-
-```
-Practical 6/
-├── index.html          # Main Dashboard
-├── admin.html          # Student Management Directory
-├── events.html         # Events Portal
-├── faq.html            # Help & FAQ Center
-├── profile.html        # Student Profile Page
-├── notices.html        # Announcements & Notices
+```text
+Practical-6/
 ├── css/
-│   └── style.css       # Global & Component Styles
-├── js/
-│   ├── main.js         # Navigation & Theme Control
-│   ├── students-app.js # Student Management Logic & JSON Fetch
-│   ├── events-app.js   # Events Rendering & Filtering Logic
-│   ├── faq-app.js      # Interactive FAQ Logic
-│   └── utils.js        # Helper Utilities & Storage Handlers
 ├── data/
-│   ├── students.json   # Student Records Dataset
-│   ├── events.json     # Campus Events Dataset
-│   └── faqs.json       # FAQ Dataset
-└── README.md           # Documentation
+│   ├── events.json
+│   ├── students.json
+│   └── faqs.json
+├── js/
+│   ├── event-app.js
+│   ├── faq-app.js
+│   ├── main.js
+│   ├── students-app.js
+│   └── utils.js
+├── events.html
+├── admin.html
+├── faq.html
+└── README.md
 ```
 
----
+## Main Features
 
-## 🛠️ Technologies Used
-- HTML5 (Semantic Structure)
-- CSS3 (Flexbox & Grid Layouts)
-- JavaScript ES6+ (Async/Fetch API, DOM Manipulation)
-- JSON (Structured Local Data Storage)
+### Events
+- Fetch `events.json`
+- Search events
+- Filter by category
+- Sort by date/title
+- Pagination
+- Event details modal
+
+### Students
+- Fetch `students.json`
+- Search by name/ID
+- Filter by branch
+- Sort students
+- Pagination
+
+### FAQs
+- Fetch `faqs.json`
+- Search questions/answers
+- Filter by category
+- Pagination
+- Accordion for answers
+
+## JavaScript Modules
+
+- **`event-app.js`** – Event fetching, rendering, search, filter, sort and pagination.
+- **`students-app.js`** – Student fetching, rendering, search, filter, sort and pagination.
+- **`faq-app.js`** – FAQ fetching, rendering, search, filter and pagination.
+- **`utils.js`** – Common functions such as `fetchJSON()`, `debounce()`, pagination, loading and error handling.
+- **`main.js`** – Common UI features such as navigation, theme, modal, banner and other interactions.
+
+## Important Array Methods
+
+| Method       | Purpose          |
+|--------------|------------------|
+| `map()`      | Render data      |
+| `filter()`   | Search/filter    |
+| `sort()`     | Sort records     |
+| `slice()`    | Pagination       |
+| `forEach()`  | Iterate elements |
+| `includes()` | Search text      |
+
+## Fetch API
+
+```javascript
+fetchJSON('data/events.json')
+    .then(data => {
+        // Render data
+    })
+    .catch(error => {
+        // Handle error
+    });
+```
+
+## Loading & Error Handling
+
+The application displays a loading message while data is being fetched and shows an error with a **Retry** option if loading fails.
+
+## Dataset
+
+The project contains:
+
+- `events.json`
+- `students.json`
+- `faqs.json`
+
+Each dataset contains **at least 15 records**.
+
+## Testing
+
+Test the following:
+
+- JSON loading
+- Search
+- Filter
+- Sorting
+- Pagination
+- Modal/accordion
+- Loading state
+- Error and Retry state
+- Browser console errors
+
+## How to Run
+
+Use **VS Code Live Server** to run the project because JSON files are loaded using the Fetch API.
+
+Open:
+- `events.html` → Events
+- `admin.html` → Students
+- `faq.html` → FAQs
+
+## Learning Outcome
+
+Students will learn to **fetch JSON data, process arrays, dynamically render frontend views, and implement search, filtering, sorting, pagination, and error handling**.
+
+
+
+## Conclusion
+
+This practical demonstrates dynamic frontend development using **JSON, Fetch API, DOM manipulation, array methods, search, filter, sorting, pagination, and modular JavaScript**.
