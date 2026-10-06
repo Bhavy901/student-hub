@@ -1,4 +1,6 @@
 // Practical 7 JavaScript - Interactive Controls & Validation
+// Student ID: 25CS016 | Student Name: Bhavy Gol
+
 document.addEventListener('DOMContentLoaded', function() {
   
   // Mobile Navigation Toggle

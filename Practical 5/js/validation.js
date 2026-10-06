@@ -1,5 +1,7 @@
 (function () {
   'use strict';
+  // Student ID: 25CS016 | Student Name: Bhavy Gol
+
 
   var form = document.getElementById('registration-form');
   var successPanel = document.getElementById('success-panel');

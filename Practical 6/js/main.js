@@ -1,4 +1,8 @@
-/*=============================== */
+/* ===================================================
+ * Student Hub - Practical 6
+ * Student ID: 25CS016 | Student Name: Bhavy Gol
+ * =================================================== */
+
 
 /* ---- 1. Dynamic footer year ---- */
 document.querySelectorAll('[data-year]').forEach(el => {
