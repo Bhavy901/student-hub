@@ -1,5 +1,13 @@
 # Practical 6: Fetch API, JSON, Search & Filter
 
+**Student Name:** Bhavy Gol  
+**Student ID:** 25CS016  
+**Course Code:** ITUE203 - WEB DEVELOPMENT FRAMEWORKS  
+**Academic Year:** 2026-27  
+
+---
+
+
 ## Objective
 Fetch external JSON data using the **Fetch API** and dynamically display it with search, filtering, sorting, and pagination.
 

@@ -1,8 +1,10 @@
 # Practical 7: PHP Form Processing with Server-Side Validation & CSV/JSON Storage
 
 **Student Name:** Bhavy Gol  
-**Roll No:** 25CS016  
-**Course / Subject:** Web Development / PHP Backend Programming  
+**Student ID:** 25CS016  
+**Course Code:** ITUE203 - WEB DEVELOPMENT FRAMEWORKS  
+**Academic Year:** 2026-27  
+
 
 ---
 

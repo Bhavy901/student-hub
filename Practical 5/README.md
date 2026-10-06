@@ -1,5 +1,13 @@
 # Practical 5: Registration Form with Frontend Validation and User-Friendly Error Handling
 
+**Student Name:** Bhavy Gol  
+**Student ID:** 25CS016  
+**Course Code:** ITUE203 - WEB DEVELOPMENT FRAMEWORKS  
+**Academic Year:** 2026-27  
+
+---
+
+
 ## Practical Overview
 This practical focuses on creating a student registration form using HTML5, CSS3, and JavaScript. JavaScript is used for client-side validation, Regular Expressions, password strength checking, and user-friendly error handling.
 

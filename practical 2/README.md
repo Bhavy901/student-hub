@@ -1,7 +1,10 @@
 # StudentHub – HTML5 Semantic Page Conversion
 
-**Student:** Bhavy Gol  
-**Roll No:** 25CS016  
+**Student Name:** Bhavy Gol  
+**Student ID:** 25CS016  
+**Course Code:** ITUE203 - WEB DEVELOPMENT FRAMEWORKS  
+**Academic Year:** 2026-27  
+
 
 ---
 
