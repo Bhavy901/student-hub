@@ -1,0 +1,8 @@
+# Disable script execution in uploads folder to prevent Remote Code Execution (RCE)
+<FilesMatch "\.(php|php[0-9]|phtml|phar|pl|py|jsp|asp|sh|cgi)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Disable directory browsing
+Options -Indexes
